@@ -22,7 +22,13 @@ namespace Singly_Linked_List
             START = null;
         }
 
-        
+        public void addNote() /* Method untuk menambahkan sebuah Node kedalam list */
+        {
+            int nim;
+            string nm;
+            Console.Write("\nMasukkan Nomer Mahasiswa: ");
+            nim = Convert.ToInt32(Console.ReadLine());
+        }
     }
 
     internal class Program
