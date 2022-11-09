@@ -47,6 +47,26 @@ namespace Singly_Linked_List
             }
 
             /*Menemukan lokasi node baru didalam list*/
+
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while ((current != null) && (nim >= current.noMhs))
+            {
+                if ( nim == current.noMhs)
+                {
+                    Console.WriteLine("\nNomer mahasiswa sama tidak diizinkan\n");
+                    return ;
+                }
+                previous = current;
+                current = current.next; 
+            }
+            /*Node baru akan ditempatkan diantara previous dan current*/
+
+            nodebaru.next = current;
+            previous.next = nodebaru;
+
         }
     }
 
