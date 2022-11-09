@@ -83,6 +83,22 @@ namespace Singly_Linked_List
         }
 
         /*Method untuk mengecheck apakah node yang dimaksudkan ada didalam list*/
+        public bool Search(int nim,ref Node previous,ref Node current)
+        {
+            previous = START;
+            current = START;
+
+            while ((current != null) && (nim != current.noMhs))
+            {
+                previous = current;
+                current = current.next;
+            }
+
+            if (current == null)
+                return (false);
+            else
+                return (true);
+        }
     }
 
     internal class Program
