@@ -102,16 +102,24 @@ namespace Singly_Linked_List
         /*Method untuk Traverse/mengunjungi dan membaca isi list*/
         public void traverse()
         {
-            if (listEmpty())
+            if (ListEmpty())
                 Console.WriteLine("\nList Kosong. \n");
             else
             {
                 Console.WriteLine("\nData didalam list adalah : \n");
                 Node currentNode;
-                for (currentNode = START; currentNode != null; currentNode = currentNode.next) ;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
                 Console.Write(currentNode.noMhs + " " + currentNode.nama + "\n");
                 Console.WriteLine();
             }
+        }
+
+        public bool ListEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
         }
     }
 
