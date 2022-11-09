@@ -28,6 +28,25 @@ namespace Singly_Linked_List
             string nm;
             Console.Write("\nMasukkan Nomer Mahasiswa: ");
             nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nMasukkan Nama Mahasiswa: ");
+            nm = Console.ReadLine();
+            Node nodebaru = new Node();
+            nodebaru.noMhs = nim;
+            nodebaru.nama = nm;
+
+            if (START == null || nim <= START.noMhs) /* Node ditambahkan sebagai node pertama*/
+            {
+                if ((START != null) && (nim == START.noMhs))
+                {
+                    Console.WriteLine("\nNomer Mahasiswa sama tidak diizinkan");
+                    return;
+                }
+                nodebaru.next = START;
+                START = nodebaru;
+                return;
+            }
+
+            /*Menemukan lokasi node baru didalam list*/
         }
     }
 
