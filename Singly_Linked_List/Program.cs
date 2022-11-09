@@ -68,6 +68,21 @@ namespace Singly_Linked_List
             previous.next = nodebaru;
 
         }
+        /*Method untuk menghapus node tertentu didalam list*/
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous = current = null;
+            /*Checl apakah node yang dimaksud ada didalam list atau tidak*/
+            if(Search(nim,ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+        }
+
+        /*Method untuk mengecheck apakah node yang dimaksudkan ada didalam list*/
     }
 
     internal class Program
